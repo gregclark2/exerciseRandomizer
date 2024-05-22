@@ -1,3 +1,5 @@
+import java.time.ZonedDateTime;
+
 public class Exercise {
 
     private String name;
@@ -5,12 +7,24 @@ public class Exercise {
 
     private String repsDuration;
 
-    public Exercise(){}
+    private boolean completed;
+
+    //want this to be part of object even though it's going to be
+    //key of log hashmap to track potential bugs in datetime log filing
+    //through potential mismatch of map key/exercise object data field
+    private ZonedDateTime dateComplete;
+
+    //running count as immutable (hopfully) index (not exercise type index)
+    private int runningCount;
+    public Exercise(){
+        runningCount++;
+    }
 
     public Exercise(String name, int indexNum, String repsDuration) {
         this.name = name;
         this.indexNum = indexNum;
         this.repsDuration = repsDuration;
+        runningCount++;
     }
 
     public String getName() {

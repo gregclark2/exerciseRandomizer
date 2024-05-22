@@ -1,1 +1,24 @@
 1. could add a range for each exercise and random roll reps/duration for fun
+
+2. ask did you do it? before it shuts down...keep log...enable various kind of reports on
+    excerises and total done that day - need to i/o to file to save
+
+    - delimit with ','... String[] line = String.split(inputLine, ",").trim();
+                        String name, repsdur;
+                        int indexNum;
+                    for(int i = 0, i < line.length; i++){
+                        if i == 1{
+                        indexNum = String.valueOf(line[i]);
+                        }
+                        ...use a switch case here?
+
+                        no no while hasNextLine....Exercise entry = new Exercise(line[0], Integer.valueOf(line[1], line[2])
+
+                    }
+
+                    each completed exercise object check if today's date is the same as the last
+                    entry in the 'calendar' or 'log' hashmap and if it's new sets new logging key to
+                    new date - ACTUALLY this isn't necessary...
+
+3. add in program enter delete and edit entry feature.
+4. need menus to choose entry, edit, use/select, save.exit
